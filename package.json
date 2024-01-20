@@ -5,7 +5,12 @@
   "main": "index.js",
   "type": "module",
   "keywords": ["build","stream","system","make","tool","pipeline","sass complier","live server"],
-  "author": "",
+  "author": "WebstackTeam <support@webstack.in> (https://webstack.in/)",
+  "contributors": [
+    "Sahil Satpute <sahil@webstack.in> (https://github.com/exploresahil)",
+    "Parag Koche <parag@webstack.in> (https://github.com/Paragkoche)"
+],
+"repository": "WebStack-tech/ez-web-dev",
   "bin":{
     "ez-web-dev":"./src/index.js"
   },
