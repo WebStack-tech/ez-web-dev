@@ -54,6 +54,7 @@ folderName.then((data) => {
         "version": "1.0.0",
         "description": "Live compile SCSS files to CSS and serve index.html",
         "scripts": {
+          "init": "node -e \\"const fs = require('fs'); if (!fs.existsSync('scss')) { fs.mkdirSync('scss'); } if (!fs.existsSync('scss/styles.scss')) { fs.writeFileSync('scss/styles.scss', ''); }\\"",
           "compile:scss": "sass --no-source-map --watch scss:css --poll",
           "start:scss": "npm run init && npm run compile:scss",
           "serve": "browser-sync start --server --port 3000 --files 'css/*.css, *.html'",
