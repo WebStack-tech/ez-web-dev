@@ -1,4 +1,6 @@
-# SCSS Compiler with BrowserSync
+# ez-web-dev
+
+## SCSS Compiler with BrowserSync
 
 This project provides a simple setup for live compiling SCSS files to CSS and serving an `index.html` file using BrowserSync. It's a convenient way to streamline your development workflow.
 
@@ -6,25 +8,38 @@ This project provides a simple setup for live compiling SCSS files to CSS and se
 
 Make sure you have Node.js and npm installed on your machine. You can download and install them from [Node.js official website](https://nodejs.org/).
 
+## Contributors
+
+Idea and compilation - [exploresahil](https://github.com/exploresahil).
+Execution and testing - [Paragkoche](https://github.com/Paragkoche).
+
 ## Getting Started
 
 ---
 
-### Method 1 (Clone)
+### Method 1
 
-1. Clone this repository to your local machine:
+### JavaScript
+
+1. using a package manager:
 
 ```bash
-$ git clone https://github.com/exploresahil/sass-compile-npm.git
+$ npx ez-web-dev@latest
 ```
 
 2. Navigate to the project directory:
 
 ```bash
-$ cd sass-compile-npm
+$ cd my-app
 ```
 
-3. Install dependencies:
+3. Update dependencies:
+
+```bash
+$ npm update
+```
+
+4. Install dependencies:
 
 ```bash
 $ npm install
@@ -59,9 +74,6 @@ project-folder/
 
 ```json
 {
-  "name": "html-scss-compiler",
-  "version": "1.0.0",
-  "description": "Live compile SCSS files to CSS and serve index.html",
   "scripts": {
     "init": "node -e \"const fs = require('fs'); if (!fs.existsSync('scss')) { fs.mkdirSync('scss'); } if (!fs.existsSync('scss/styles.scss')) { fs.writeFileSync('scss/styles.scss', ''); }\"",
     "compile:scss": "sass --no-source-map --watch scss:css --poll",
